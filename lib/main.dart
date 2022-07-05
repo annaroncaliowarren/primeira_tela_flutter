@@ -274,7 +274,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 180,
                     margin: const EdgeInsets.only(
-                        left: 50, bottom: 10, right: 20, top: 20),
+                        left: 40, bottom: 10, right: 20, top: 20),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 25,
                       vertical: 40,
@@ -412,7 +412,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 180,
                     margin: const EdgeInsets.only(
-                        left: 50, bottom: 20, right: 20, top: 20),
+                        left: 40, bottom: 20, right: 20, top: 20),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 25,
                       vertical: 40,
