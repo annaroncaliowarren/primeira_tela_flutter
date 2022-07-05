@@ -157,24 +157,35 @@ class HomePage extends StatelessWidget {
                 height: 40,
               ),
               SizedBox(
-                height: 50,
+                height: 55,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  padding: const EdgeInsets.only(left: 35),
-                  children: const [
+                  padding: const EdgeInsets.only(
+                    left: 35,
+                  ),
+                  children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
-                      child: Text(
-                        'Living Room',
-                        style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Column(
+                        children: const [
+                          Text(
+                            'Living Room',
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 12),
+                          Icon(
+                            Icons.circle,
+                            size: 8,
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -187,7 +198,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -200,7 +211,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -213,7 +224,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -226,7 +237,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
@@ -255,7 +266,7 @@ class HomePage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: Colors.blue[400],
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -316,7 +327,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 200,
                     width: 180,
                     margin: const EdgeInsets.only(
                       right: 50,
@@ -327,7 +337,7 @@ class HomePage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -366,7 +376,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Text(
                           'CLOSED',
@@ -385,7 +395,6 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    height: 200,
                     width: 180,
                     margin: const EdgeInsets.only(
                         left: 50, bottom: 20, right: 30, top: 20),
@@ -434,7 +443,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Text(
                           'CLOSED',
@@ -448,7 +457,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 200,
                     width: 180,
                     margin: const EdgeInsets.only(
                       right: 50,
@@ -498,7 +506,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Text(
                           'CLOSED',
@@ -534,7 +542,10 @@ class HomePage extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
-                    colors: [Colors.blue.shade400, Colors.blue.shade700],
+                    colors: [
+                      Colors.blue.shade400,
+                      Colors.blue.shade700,
+                    ],
                   ),
                 ),
                 child: Row(
