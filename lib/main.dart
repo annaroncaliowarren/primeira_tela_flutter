@@ -17,7 +17,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AppTreino'),
+        title: const Text(
+          'AppTreino',
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        ),
+        toolbarHeight: 30,
+        backgroundColor: Colors.blue[300],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -35,11 +42,17 @@ class HomePage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0,
+                      spreadRadius: 1,
                       blurRadius: 7,
                       offset: const Offset(8, 8),
                     ),
                   ],
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      'https://cdn.pixabay.com/photo/2016/06/22/16/22/clouds-1473311_960_720.jpg',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +63,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         '1 Feb 2019',
                         style: TextStyle(
-                          color: Colors.grey.shade700,
+                          color: Colors.grey.shade900,
                           fontSize: 13,
                           fontWeight: FontWeight.w500,
                         ),
@@ -60,15 +73,16 @@ class HomePage extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.cloud,
-                          color: Colors.amber[500],
+                          color: Colors.amber[400],
                           size: 30,
                         ),
                         const SizedBox(
                           width: 10,
                         ),
-                        const Text(
+                        Text(
                           'Cloudy',
                           style: TextStyle(
+                            color: Colors.grey.shade800,
                             fontWeight: FontWeight.bold,
                             fontSize: 26,
                             letterSpacing: 0.3,
@@ -88,18 +102,19 @@ class HomePage extends StatelessWidget {
                             Text(
                               '26°C',
                               style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.grey[800]),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[900],
+                              ),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
+                            Text(
                               'Indoor Temp',
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.grey,
+                                color: Colors.grey.shade900,
                               ),
                             ),
                           ],
@@ -111,17 +126,17 @@ class HomePage extends StatelessWidget {
                               '48.2%',
                               style: TextStyle(
                                 fontSize: 18,
-                                color: Colors.grey[800],
+                                color: Colors.grey[900],
                               ),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
+                            Text(
                               'Outdoor Humidity',
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.grey,
+                                color: Colors.grey.shade900,
                               ),
                             ),
                           ],
@@ -133,17 +148,17 @@ class HomePage extends StatelessWidget {
                               '52.99%',
                               style: TextStyle(
                                 fontSize: 18,
-                                color: Colors.grey[800],
+                                color: Colors.grey[900],
                               ),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
+                            Text(
                               'Indoor',
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.grey,
+                                color: Colors.grey.shade900,
                               ),
                             ),
                           ],
@@ -154,7 +169,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               SizedBox(
                 height: 55,
@@ -259,7 +274,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 180,
                     margin: const EdgeInsets.only(
-                        left: 50, bottom: 20, right: 30, top: 20),
+                        left: 50, bottom: 10, right: 20, top: 20),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 25,
                       vertical: 40,
@@ -279,8 +294,8 @@ class HomePage extends StatelessWidget {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Colors.blue,
-                            Colors.blue.shade700,
+                            Colors.blue.shade300,
+                            Colors.blue.shade800,
                           ]),
                     ),
                     child: Column(
@@ -397,14 +412,14 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 180,
                     margin: const EdgeInsets.only(
-                        left: 50, bottom: 20, right: 30, top: 20),
+                        left: 50, bottom: 20, right: 20, top: 20),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 25,
                       vertical: 40,
                     ),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -467,7 +482,7 @@ class HomePage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -544,7 +559,7 @@ class HomePage extends StatelessWidget {
                     end: Alignment.centerRight,
                     colors: [
                       Colors.blue.shade400,
-                      Colors.blue.shade700,
+                      Colors.blue.shade800,
                     ],
                   ),
                 ),
