@@ -21,7 +21,8 @@ class HomePage extends StatelessWidget {
         title: const Text(
           'AppTreino',
         ),
-        backgroundColor: Colors.blue[300],
+        elevation: 0,
+        backgroundColor: Colors.blue[500],
         actions: [
           IconButton(
             onPressed: () {

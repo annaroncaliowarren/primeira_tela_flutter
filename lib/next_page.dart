@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/app_assets.dart';
 
 // stl atalho
 
@@ -9,6 +10,8 @@ class NextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 138, 92, 218),
+        elevation: 0,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -19,24 +22,36 @@ class NextPage extends StatelessWidget {
           ),
         ),
       ),
-      body: const SingleChildScrollView(
-        child: Center(
-          child: Text(
-            'Oi, sou a outra tela.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              decoration: TextDecoration.lineThrough,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(imgLostOnline),
+            Image.asset(imgCircleArrow),
+            const Text(
+              'Treinando fontes',
+              style: TextStyle(
+                fontSize: 40,
+                fontFamily: 'Lora',
+                fontWeight: FontWeight.w500,
+              ),
             ),
-          ),
+            const SizedBox(height: 20),
+          ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blue[700],
+        color: Color.fromARGB(255, 138, 92, 218),
         child: Row(
           children: [
+            IconButton(
+              onPressed: () {},
+              tooltip: 'Menu',
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.white,
+                size: 25,
+              ),
+            ),
             IconButton(
               onPressed: () {},
               tooltip: 'Favorite',
@@ -48,9 +63,9 @@ class NextPage extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {},
-              tooltip: 'Favorite',
+              tooltip: 'Search',
               icon: const Icon(
-                Icons.favorite,
+                Icons.search,
                 color: Colors.white,
                 size: 25,
               ),
