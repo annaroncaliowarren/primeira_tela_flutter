@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'next_page.dart';
 
 void main() {
   runApp(
@@ -19,12 +20,23 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'AppTreino',
-          style: TextStyle(
-            fontSize: 15,
-          ),
         ),
-        toolbarHeight: 30,
         backgroundColor: Colors.blue[300],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const NextPage(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.keyboard_arrow_right,
+              size: 40,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -271,137 +283,139 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    width: 180,
-                    margin: const EdgeInsets.only(
-                        left: 40, bottom: 10, right: 20, top: 20),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 40,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.blue[400],
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          blurRadius: 7,
-                          spreadRadius: 1,
-                          offset: const Offset(8, 8),
-                        ),
-                      ],
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Colors.blue.shade300,
-                            Colors.blue.shade800,
-                          ]),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Icon(
-                              Icons.lightbulb,
-                              size: 30,
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                          left: 25, bottom: 10, right: 30, top: 20),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 25,
+                        vertical: 40,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[400],
+                        borderRadius: BorderRadius.circular(40),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 7,
+                            spreadRadius: 1,
+                            offset: const Offset(8, 8),
+                          ),
+                        ],
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.blue.shade300,
+                              Colors.blue.shade800,
+                            ]),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Icon(
+                                Icons.lightbulb,
+                                size: 30,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.circle,
+                                size: 15,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          const Text(
+                            'Lamp',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
                               color: Colors.white,
                             ),
-                            Icon(
-                              Icons.circle,
-                              size: 15,
-                              color: Colors.white,
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'OPENED',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w200,
+                              color: Colors.grey.shade300,
                             ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        const Text(
-                          'Lamp',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'OPENED',
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey.shade300,
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 180,
-                    margin: const EdgeInsets.only(
-                      right: 50,
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 40,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          blurRadius: 7,
-                          spreadRadius: 1,
-                          offset: const Offset(8, 8),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.router_rounded,
-                              size: 30,
-                              color: Colors.blue.shade500,
-                            ),
-                            const Icon(
-                              Icons.circle,
-                              size: 15,
-                              color: Colors.red,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        const Text(
-                          'Router',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                        right: 50,
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 25,
+                        vertical: 40,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(40),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 7,
+                            spreadRadius: 1,
+                            offset: const Offset(8, 8),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'CLOSED',
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w100,
-                            color: Colors.grey.shade600,
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(
+                                Icons.router_rounded,
+                                size: 30,
+                                color: Colors.blue.shade500,
+                              ),
+                              const Icon(
+                                Icons.circle,
+                                size: 15,
+                                color: Colors.red,
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          const Text(
+                            'Router',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'CLOSED',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w100,
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -409,129 +423,131 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    width: 180,
-                    margin: const EdgeInsets.only(
-                        left: 40, bottom: 20, right: 20, top: 20),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 40,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          blurRadius: 7,
-                          spreadRadius: 1,
-                          offset: const Offset(8, 8),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.air_rounded,
-                              size: 30,
-                              color: Colors.blue.shade500,
-                            ),
-                            const Icon(
-                              Icons.circle,
-                              size: 15,
-                              color: Colors.red,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        const Text(
-                          'Air',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                          left: 25, bottom: 20, right: 30, top: 20),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 25,
+                        vertical: 40,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(40),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 7,
+                            spreadRadius: 1,
+                            offset: const Offset(8, 8),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'CLOSED',
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w100,
-                            color: Colors.grey.shade600,
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(
+                                Icons.air_rounded,
+                                size: 30,
+                                color: Colors.blue.shade500,
+                              ),
+                              const Icon(
+                                Icons.circle,
+                                size: 15,
+                                color: Colors.red,
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          const Text(
+                            'Air',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'CLOSED',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w100,
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 180,
-                    margin: const EdgeInsets.only(
-                      right: 50,
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 40,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          blurRadius: 7,
-                          spreadRadius: 1,
-                          offset: const Offset(8, 8),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.kitchen_rounded,
-                              size: 30,
-                              color: Colors.blue.shade500,
-                            ),
-                            const Icon(
-                              Icons.circle,
-                              size: 15,
-                              color: Colors.red,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        const Text(
-                          'Fridge',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                        right: 50,
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 25,
+                        vertical: 40,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(40),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 7,
+                            spreadRadius: 1,
+                            offset: const Offset(8, 8),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'CLOSED',
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w100,
-                            color: Colors.grey.shade600,
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(
+                                Icons.kitchen_rounded,
+                                size: 30,
+                                color: Colors.blue.shade500,
+                              ),
+                              const Icon(
+                                Icons.circle,
+                                size: 15,
+                                color: Colors.red,
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          const Text(
+                            'Fridge',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'CLOSED',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w100,
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -543,7 +559,7 @@ class HomePage extends StatelessWidget {
                   horizontal: 5,
                   vertical: 12,
                 ),
-                margin: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: [
