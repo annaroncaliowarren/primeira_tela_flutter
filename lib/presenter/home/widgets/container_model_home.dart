@@ -7,7 +7,7 @@ class ContainerModelHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 180,
+      width: 155,
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.symmetric(
         horizontal: 25,
