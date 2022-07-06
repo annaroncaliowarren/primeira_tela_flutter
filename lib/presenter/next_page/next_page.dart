@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/app_assets.dart';
+import 'widgets/body_next_page.dart';
 
 // stl atalho
 
@@ -22,23 +22,7 @@ class NextPage extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset(imgLostOnline),
-            Image.asset(imgCircleArrow),
-            const Text(
-              'Treinando fontes',
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Lora',
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
+      body: const BodyNextPage(),
       bottomNavigationBar: BottomAppBar(
         color: const Color.fromARGB(255, 138, 92, 218),
         child: Row(
@@ -76,3 +60,4 @@ class NextPage extends StatelessWidget {
     );
   }
 }
+

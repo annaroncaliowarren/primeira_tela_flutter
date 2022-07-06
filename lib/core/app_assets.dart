@@ -7,3 +7,4 @@ const String imgCircleArrow = 'assets/images/handcrafts_circled_arrows.png';
 
 // icons para o app
 const String iconInsta = 'assets/icons/insta_logo.png';
+const String iconTwitter = 'assets/icons/twitter_logo.png';

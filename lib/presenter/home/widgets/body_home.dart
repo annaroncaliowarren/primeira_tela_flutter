@@ -10,25 +10,23 @@ class BodyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              const CardWeatherHome(),
-              const SizedBox(height: 30),
-              const ListTextHorizontal(),
-              Wrap(
-                children: const [
-                  ContainerModelHome(),
-                  ContainerModelHome(),
-                  ContainerModelHome(),
-                  ContainerModelHome(),
-                ],
-              ),
-              const ContainerMusicHome(),
-            ],
-          ),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const CardWeatherHome(),
+            const SizedBox(height: 30),
+            const ListTextHorizontal(),
+            Wrap(
+              children: const [
+                ContainerModelHome(),
+                ContainerModelHome(),
+                ContainerModelHome(),
+                ContainerModelHome(),
+              ],
+            ),
+            const ContainerMusicHome(),
+          ],
         ),
       ),
     );
