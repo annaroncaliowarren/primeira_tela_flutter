@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'core/app_assets.dart';
+import '../../core/app_assets.dart';
 
 // stl atalho
 
@@ -10,7 +10,7 @@ class NextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 138, 92, 218),
+        backgroundColor: const Color.fromARGB(255, 138, 92, 218),
         elevation: 0,
         leading: IconButton(
           onPressed: () {
@@ -40,7 +40,7 @@ class NextPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 138, 92, 218),
+        color: const Color.fromARGB(255, 138, 92, 218),
         child: Row(
           children: [
             IconButton(
